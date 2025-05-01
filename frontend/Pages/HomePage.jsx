@@ -99,7 +99,7 @@ const HomePage = () => {
         <p className="lead">
           Transform your documents to {" "}
           <span className={`conversion-text ${fade ? 'fade-out' : 'fade-in'}`}>{currentConversion}</span>{" "}
-          effortlessly. All tools are FREE and user-friendly!
+          effortlessly. All tools are Priced and user-friendly!
         </p>
       </header>
 
