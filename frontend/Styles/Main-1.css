@@ -1,0 +1,153 @@
+
+.docx-to-pdf,
+.excel-to-csv,
+.pdf-to-docx,
+.pdf-to-excel,
+.pdf-to-pptx,
+.pptx-to-pdf,
+.pdf-compress
+
+
+.card {
+  border: none;
+  /* border-radius: 1px; */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* === Form Label Styling === */
+.form-label {
+  font-weight: bold;
+}
+
+/* === Button Styling === */
+.btn-primary {
+  background-color: #007bff;
+  color: #000;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* === Message Styling === */
+.success-message,
+.error-message {
+  font-size: 1rem;
+}
+
+/* === Shimmer Effect for Loading Text === */
+.converting-shimmer {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #000 25%, #fff 50%, #000 75%);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer 20s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+
+.merge-docs-to-pdf {
+  padding: 2rem;
+}
+
+.merge-docs-to-pdf .file-input-container {
+    position: relative;
+    overflow: hidden;
+    margin: 15px 0;
+  }
+
+  .merge-docs-to-pdf .btn-danger {
+    padding: 2px 8px;
+    border-radius: 50%;
+    line-height: 1;
+    background-color: #dc3545; 
+  }
+  
+  .merge-docs-to-pdf .btn-danger:hover {
+    background-color: #bb2d3b;
+  } 
+  
+  .merge-docs-to-pdf .file-input-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .merge-docs-to-pdf .file-input-label:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #fda085 0%, #f6d365 100%);
+  }
+  
+  .merge-docs-to-pdf input[type="file"] {
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+    height: 45px;
+    cursor: pointer;
+  }
+  
+  .merge-docs-to-pdf .selected-files {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+  }
+  
+  .merge-docs-to-pdf .file-item {
+    padding: 8px 12px;
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.2s;
+  }
+  
+  .merge-docs-to-pdf .file-item:hover {
+    background-color: #e9ecef;
+  }
+  
+  .merge-docs-to-pdf .file-name {
+    font-size: 0.9rem;
+    color: #495057;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
