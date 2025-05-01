@@ -4,8 +4,8 @@ setlocal EnableDelayedExpansion
 REM Variables
 set VERSION_FILE=version.txt
 set DOCKER_USERNAME=gopikumar1
-set CLIENT_IMAGE_NAME=frontend-image
-set SERVER_IMAGE_NAME=backend-image
+set CLIENT_IMAGE_NAME=free-fe-image
+set SERVER_IMAGE_NAME=free-be-image
 
 REM Ensure version file exists
 if not exist "%VERSION_FILE%" (

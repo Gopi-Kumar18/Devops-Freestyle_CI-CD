@@ -1,72 +1,38 @@
-# version: '3.8'
-
-# services:
-#   front:
-#     image: frontend-image
-#     ports:
-#       - "5173:5173"
-#     restart: on-failure
-#     networks:
-#       - docswitch-net
-
-#   backend:
-#     image: backend-image
-#     ports:
-#       - "3000:3000"
-#     restart: on-failure
-#     env_file:
-#       - ./backend/.env
-#     networks:
-#       - docswitch-net
-
-#   mongo:
-#     image: mongo:6
-#     container_name: mongo
-#     volumes:
-#       - mongo-data:/data/db
-#     networks:
-#       - docswitch-net
-
-# networks:
-#   docswitch-net:
-#     driver: bridge
-
-# volumes:
-#   mongo-data:
-
 
 version: '3.8'
 
 services:
   front:
-    image: gopikumar1/frontend-image
+    image: gopikumar1/free-fe-image
     ports:
       - "5173:5173"
     restart: on-failure
     networks:
-      - pulled-ds-net
+      - docswitch-free-net
 
   backend:
-    image: gopikumar1/backend-image
+    image: gopikumar1/free-be-image
     ports:
       - "3000:3000"
     restart: on-failure
     env_file:
       - ./backend/.env
     networks:
-      - pulled-ds-net
+      - docswitch-free-net
 
   mongo:
     image: mongo:6
     container_name: mongo
+    ports:
+      - "27017:27017"
     volumes:
       - mongo-data:/data/db
     networks:
-      - pulled-ds-net
+      - docswitch-free-net
 
 
 networks:
-  pulled-ds-net:
+  docswitch-free-net:
     external: true
 
 volumes:
