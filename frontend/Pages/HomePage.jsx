@@ -95,11 +95,11 @@ const HomePage = () => {
   return (
     <div className="home-page container">
       <header className="text-center mt-5">
-      <div className="display-6">From PDFs to Everything – sjdvnj</div>
+      <div className="display-6">From PDFs to Everything – Instantly</div>
         <p className="lead">
           Transform your documents to {" "}
           <span className={`conversion-text ${fade ? 'fade-out' : 'fade-in'}`}>{currentConversion}</span>{" "}
-          effortlessly. All tools are Priced and user-friendly!
+          effortlessly. All tools are Free and user-friendly!
         </p>
       </header>
 
