@@ -17,6 +17,8 @@ services:
     restart: on-failure
     env_file:
       - ./backend/.env
+    depends_on:
+      - mongo
     networks:
       - docswitch-free-net
 
